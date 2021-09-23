@@ -6,3 +6,4 @@ function switchMode() {
 }
 
 switchMode();
+line2
