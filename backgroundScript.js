@@ -1,6 +1,7 @@
-chrome.browserAction.onClicked.addListener(
-    function(tab) {
-    chrome.tabs.executeScript(tab.id, {
-    "file": "contentScript.js"
-    });
-    });
+async function getCurrentTab() {/* ... */}
+let tab = await getCurrentTab();
+
+chrome.scripting.executeScript({
+  target: {tabId: tab.id},
+  files: ['script.js']
+});
